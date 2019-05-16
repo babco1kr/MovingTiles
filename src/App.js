@@ -9,6 +9,11 @@ class App extends Component {
     photos
   }
 
+  hover = id => {
+    const element = document.getElementById(id);
+    element.classList.add("hovered")
+  }
+
   render () {
     return(
     <div className='wrapper'>
@@ -17,6 +22,7 @@ class App extends Component {
         key={photo.id}
         id={photo.id}
         image={photo.image}
+        hover={this.hover}
         />
       ))}
     </div>

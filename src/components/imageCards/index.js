@@ -3,7 +3,7 @@ import './style.css';
 
 function ImageCard(props) {
     return(
-        <div className='images'>
+        <div id={props.id} className='images' onMouseEnter={() => props.hover(props.id)}>
         <img src={props.image}></img>
         </div>
     )
