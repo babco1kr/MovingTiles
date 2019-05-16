@@ -11,10 +11,12 @@ class App extends Component {
     photos2: []
   }
 
+  // When loading calls split function
   componentDidMount() {
     this.split();
   }
 
+  // Splits images into to groups to be used in two seperate grids
   split() {
     let length = this.state.photos.length;
     let photos1 = [];
@@ -31,18 +33,11 @@ class App extends Component {
     this.setState({photos2: photos2});
   }
 
-  hover = id => {
-    const image = document.getElementsByClassName("images");
-    const element = document.getElementById(id);
-    // image.classList.remove("hovered");
-    element.classList.add("hovered");
-  }
-
   render () {
     return(
-    <div>
+    <div className='container'>
       <div className='wrapper'>
-        {this.state.photos1.map(photo => (
+        {this.state.photos.map(photo => (
           <ImageCard
           key={photo.id}
           id={photo.id}
@@ -51,7 +46,7 @@ class App extends Component {
           />
         ))}
       </div>
-      <div className='wrapper'>
+      {/* <div className='wrapper'>
         {this.state.photos2.map(photo => (
           <ImageCard
           key={photo.id}
@@ -60,8 +55,9 @@ class App extends Component {
           hover={this.hover}
           />
         ))}
+      </div> */}
       </div>
-    </div>
+  
   );
 }
 }
