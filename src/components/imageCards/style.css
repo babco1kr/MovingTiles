@@ -5,5 +5,10 @@
 .hovered {
     grid-row: span 2;
     grid-column: span 2;
-    /* grid-area: span 2 / span 2; */
+}
+
+/* Maybe not needed */
+.notHovered {
+    grid-row: span 1;
+    grid-column: span 1;
 }
