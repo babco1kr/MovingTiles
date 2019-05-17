@@ -2,13 +2,29 @@
     background: grey;
 }
 
-.hovered {
+/* .images1:hover {
     grid-row: span 2;
     grid-column: span 2;
+} */
+
+.hovered {
+    /* transition: all 300ms;
+    width: 200%;
+    height: 200%;
+    transition: width 2s, height 4s;
+    transform: scale(1.1); */
+    background: red;
+    width: 400px;
+    height: 400px;
+    grid-row: span 2;
+    grid-column: span 2;
+    transition: width 2s, height 4s;
 }
 
 /* Maybe not needed */
 .notHovered {
     grid-row: span 1;
     grid-column: span 1;
+    max-width: 200px;
+    max-height: 200px;
 }

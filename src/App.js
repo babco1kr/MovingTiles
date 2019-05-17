@@ -35,9 +35,9 @@ class App extends Component {
 
   render () {
     return(
-    <div>
+    <div className='container'>
       <div className='wrapper'>
-        {this.state.photos.map(photo => (
+        {this.state.photos1.map(photo => (
           <ImageCard
           key={photo.id}
           id={photo.id}
@@ -46,7 +46,7 @@ class App extends Component {
           />
         ))}
       </div>
-      {/* <div className='wrapper'>
+      <div className='wrapper'>
         {this.state.photos2.map(photo => (
           <ImageCard
           key={photo.id}
@@ -55,7 +55,7 @@ class App extends Component {
           hover={this.hover}
           />
         ))}
-      </div> */}
+      </div>
       </div>
   
   );
