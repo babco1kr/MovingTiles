@@ -8,7 +8,9 @@ class App extends Component {
   state = {
     photos,
     photos1: [],
-    photos2: []
+    photos2: [],
+    col1: 1,
+    col2: 1
   }
 
   // When loading calls split function
@@ -22,7 +24,7 @@ class App extends Component {
     let photos1 = [];
     let photos2 = [];
     for (let i = 0; i < length; i++) {
-      if (i < 9) {
+      if (i < 9) { 
         photos1.push(this.state.photos[i]);
       } else {
         photos2.push(this.state.photos[i]);
@@ -53,6 +55,7 @@ class App extends Component {
           id={photo.id}
           image={photo.image}
           hover={this.hover}
+          col={photo.col}
           />
         ))}
       </div>
