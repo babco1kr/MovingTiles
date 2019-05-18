@@ -1,3 +1,4 @@
+/* Container for the tiles */
 .wrapper {
   display: flex;
   flex-wrap: wrap;
