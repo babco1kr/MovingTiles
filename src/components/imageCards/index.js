@@ -13,54 +13,42 @@ class ImageCard extends Component {
         let element;
         if (id < 10) {
             element = document.getElementsByClassName('images1');
-            [].forEach.call(element, function(image) {
-                image.classList.remove("hovered1");
-                image.classList.add("notHovered");
-            });
-            thisElement.classList.remove("notHovered");
-            thisElement.classList.add("hovered1");
         } else {
             element = document.getElementsByClassName('images2');
-            [].forEach.call(element, function(image) {
-                image.classList.remove("hovered2");
-                image.classList.add("notHovered");
-            });
-            thisElement.classList.remove("notHovered");
-            thisElement.classList.add("hovered2");
         }
-        //     [].forEach.call(element, function(image) {
-        //     image.classList.remove("hovered1");
-        //     image.classList.add("notHovered");
-        // });
-        // thisElement.classList.remove("notHovered");
-        // thisElement.classList.add("hovered1");
+            [].forEach.call(element, function(image) {
+            image.classList.remove("hovered");
+            image.classList.add("notHovered");
+        });
+        thisElement.classList.remove("notHovered");
+        thisElement.classList.add("hovered");
     }
 
 
     render() {
         if (this.props.id === 2) {
             return(
-                // <div id={this.props.id} className='hovered images1' onMouseEnter={() => this.hover(this.props.id)}>
-                <img src={this.props.image} alt='CHANGE' id={this.props.id} className='hovered1 images1' onMouseEnter={() => this.hover(this.props.id)}></img>
-                // </div>
+                <div id={this.props.id} className='hovered images1' onMouseEnter={() => this.hover(this.props.id)}>
+                <img className='tileImages'src={this.props.image} alt='CHANGE'></img>
+                </div>
                 )
         } else if (this.props.id === 13) {
             return(
-                // <div id={this.props.id} className='hovered images2' onMouseEnter={() => this.hover(this.props.id)}>
-                <img src={this.props.image} alt='CHANGE' id={this.props.id} className='hovered2 images2' onMouseEnter={() => this.hover(this.props.id)}></img>
-                // </div>
+                <div id={this.props.id} className='hovered images2' onMouseEnter={() => this.hover(this.props.id)}>
+                <img className='tileImages' src={this.props.image} alt='CHANGE'></img>
+                </div>
                 )
         } else if (this.props.id < 10) {
             return(
-            // <div id={this.props.id} className='notHovered images1' onMouseEnter={() => this.hover(this.props.id)}>
-            <img src={this.props.image} alt='CHANGE' id={this.props.id} className='notHovered images1' onMouseEnter={() => this.hover(this.props.id)}></img>
-            // </div>
+            <div id={this.props.id} className='notHovered images1' onMouseEnter={() => this.hover(this.props.id)}>
+            <img className='tileImages' src={this.props.image} alt='CHANGE'></img>
+            </div>
             )
         } else {
         return(
-            // <div id={this.props.id} className='notHovered images2' onMouseEnter={() => this.hover(this.props.id)}>
-            <img src={this.props.image} alt ='CHANGE' id={this.props.id} className='notHovered images2' onMouseEnter={() => this.hover(this.props.id)}></img>
-            // </div>
+            <div id={this.props.id} className='notHovered images2' onMouseEnter={() => this.hover(this.props.id)}>
+            <img className='tileImages' src={this.props.image} alt ='CHANGE'></img>
+            </div>
         )
         }
 }

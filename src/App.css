@@ -1,12 +1,6 @@
 .wrapper {
-  display: grid;
-  grid-template-columns:repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5px;
-  padding-top: 5px;
-}
-
-/* .container {
   display: flex;
-  flex-flow: row wrap;
-} */
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 50vh;
+}

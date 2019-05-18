@@ -1,37 +1,48 @@
 .images1, .images2 {
     background: grey;
-    display: flex;
-    width: 100%;
-    transition: width 2s, height 4s;
+    /* height: 25vh;
+    width: 1/6vw; */
+    /* border: solid 1px white; */
+    /* display: in-line; */
 }
 
+.tileImages {
+    max-width: 100%;
+    max-height: 100%;
+}
 /* .images1:hover {
     grid-row: span 2;
     grid-column: span 2;
 } */
 
-.hovered1 {
+.hovered {
     background: red;
-    width: 100%;
-    height: 100%;
-    grid-row: 1 / span 2;
-    grid-column: span 2;
-    transition: width 2s, height 4s;
+    animation-name: grow;
+    animation-duration: 2s;
+    width: 2/6vw;
+    height: 50vh;
+    /* transition: width 1s, height 1s; */
 }
 
-.hovered2 {
-    background: red;
-    width: 100%;
-    height: 100%;
-    grid-row: span 2;
-    grid-column: span 2;
-    transition: width 2s, height 4s;
+@keyframes grow {
+    0% {width: 1/6vw; height: 25vh; z-index: 1;}
+    50% {width: 7/12vw; height: 60vh; z-index: 1;}
+    100% {width: 2/6vw; height: 50vh; z-index: 1;}
+}
+
+@keyframes moveBack {
+    0% {z-index: 0;}
+    50% {z-index: 0;}
+    100% {z-index: 0;}
 }
 
 /* Maybe not needed */
 .notHovered {
-    grid-row: span 1;
-    grid-column: span 1;
-    max-width: 200px;
-    max-height: 200px;
+    z-index: 0;
+    height: 25vh;
+    width: 1/6vw;
+    transition: width 1s, height 1s;
+    animation-name: moveBack;
+    animation-duration: 2s;
+    /* border: solid 1px white; */
 }
