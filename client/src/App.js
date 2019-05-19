@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import photos from './photos.json';
 import ImageCard from './components/imageCards';
+import API from './utils/API';
 
 class App extends Component {
 
@@ -13,7 +14,15 @@ class App extends Component {
 
   // When loading calls split function
   componentDidMount() {
+    this.getPhotos();
     this.split();
+  }
+
+  getPhotos() {
+    API.findPhoto({}).then(res => {
+      console.log("here");
+      console.log(res);
+    })
   }
 
   // Splits images into to groups to be used in two seperate grids
