@@ -1,12 +1,13 @@
 .images1, .images2 {
     background: grey;
-    height: 25vh;
+    height: 24.25vh;
     text-align: center;
     z-index: 0;
-    width: 16.66vw;
+    width: 16.5vw;
     transition: width 1s, height 1s;
     animation-name: moveBack;
     animation-duration: 2s;
+    border: solid white 1px;
 }
 
 /* Sets the image size to not get bigger than their container */
@@ -20,20 +21,21 @@
     background: red;
     animation-name: grow;
     animation-duration: 2s;
-    width: 33.33vw;
-    height: 50vh;
+    width: 33vw;
+    height: 48.5vh;
+    border: solid white 1px;
 }
 
 /* animation for the hovered images growing */
 @keyframes grow {
     0% {width: 16.66vw; height: 25vh; z-index: 1;}
-    50% {width: 58.33 vw; height: 60vh; z-index: 1;}
-    100% {width: 33.33 vw; height: 50vh; z-index: 1;}
+    50% {width: 35vw; height: 60vh; z-index: 1;}
+    100% {width: 33vw; height: 48.5vh; z-index: 1;}
 }
 
 /* animation for small images moving back */
 /* @keyframes moveBack {
-    0% {width: 33.33 vw; height: 25vh; z-index: 1;}
-    50% {width: 24.95; height: 60vh; z-index: 1;}
+    0% {width: 33.33vw; height: 25vh; z-index: 1;}
+    50% {width: 24.95vw; height: 60vh; z-index: 1;}
     100% {width: 16.66vw; height: 50vh; z-index: 1;}
 } */

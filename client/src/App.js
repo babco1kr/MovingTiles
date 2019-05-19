@@ -18,6 +18,7 @@ class App extends Component {
   }
 
   getPhotos() {
+    // API sends it to the API.js file in /utils
     API.findPhoto({}).then(res => {
       this.setState({photos: res.data});
       this.split();
