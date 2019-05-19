@@ -4,8 +4,14 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require('./routes');
 const db = require('./models');
+const bodyParser = require('body-parser')
+// app.use(cors())
 
 // Define middleware here
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
