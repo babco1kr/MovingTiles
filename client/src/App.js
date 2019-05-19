@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
-import photos from './photos.json';
+// import photos from './photos.json';
 import ImageCard from './components/imageCards';
 import API from './utils/API';
 
 class App extends Component {
 
   state = {
-    photos,
+    photos: [],
     photos1: [],
     photos2: []
   }
@@ -15,13 +15,12 @@ class App extends Component {
   // When loading calls split function
   componentDidMount() {
     this.getPhotos();
-    this.split();
   }
 
   getPhotos() {
     API.findPhoto({}).then(res => {
-      console.log("here");
-      console.log(res);
+      this.setState({photos: res.data});
+      this.split();
     })
   }
 
@@ -50,7 +49,7 @@ class App extends Component {
           <ImageCard
           key={photo.id}
           id={photo.id}
-          image={photo.image}
+          image={photo.photo}
           hover={this.hover}
           />
         ))}
@@ -60,7 +59,7 @@ class App extends Component {
           <ImageCard
           key={photo.id}
           id={photo.id}
-          image={photo.image}
+          image={photo.photo}
           hover={this.hover}
           />
         ))}
