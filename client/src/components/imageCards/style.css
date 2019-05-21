@@ -32,10 +32,3 @@
     50% {width: 35vw; height: 60vh; z-index: 1;}
     100% {width: 33vw; height: 48.5vh; z-index: 1;}
 }
-
-/* animation for small images moving back */
-/* @keyframes moveBack {
-    0% {width: 33.33vw; height: 25vh; z-index: 1;}
-    50% {width: 24.95vw; height: 60vh; z-index: 1;}
-    100% {width: 16.66vw; height: 50vh; z-index: 1;}
-} */
